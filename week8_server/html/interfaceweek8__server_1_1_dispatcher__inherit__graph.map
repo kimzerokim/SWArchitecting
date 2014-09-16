@@ -1,0 +1,4 @@
+<map id="week8_server.Dispatcher" name="week8_server.Dispatcher">
+<area shape="rect" id="node2" href="$classweek8__server_1_1_thread_per_dispatcher.html" title="dispatcher create thread for each stream " alt="" coords="5,160,240,237"/>
+<area shape="rect" id="node3" href="$classweek8__server_1_1_thread_pool_dispatcher.html" title="{week8_server.ThreadPoolDispatcher\n|~ NUMTHREADS\l~ THREADPROP\l&#45; numThreads\l|+ ThreadPoolDispatcher()\l+ dispatch()\l&#45; dispatchLoop()\l}" alt="" coords="265,131,505,267"/>
+</map>

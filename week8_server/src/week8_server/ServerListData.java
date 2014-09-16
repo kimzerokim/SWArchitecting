@@ -1,3 +1,13 @@
+/**
+ * @file ServerListData.java
+ * @author youngkim
+ * @brief class for simpleframework
+ */
+
+/**
+ * @namespace week8_server
+ * @brief project package 
+ */
 package week8_server;
 
 import java.util.List;

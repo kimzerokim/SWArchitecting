@@ -4,6 +4,10 @@
  * @brief Contains main method to run server / logger example
  */
 
+/**
+ * @namespace week8_server
+ * @brief project package 
+ */
 package week8_server;
 
 import java.io.File;
@@ -13,11 +17,26 @@ import org.apache.log4j.Logger;
 import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
 
+/**
+ * @class ServerInitializer
+ * @date 2014-09-17
+ * @author youngkim, ky200223@nhnnext.org
+ * @brief Initializer class for Reactor-Thread using server
+ * @details Initialize and start Reactor server on port 5000, using
+ *          handlerList.xml for dynamic class loading
+ */
+
 public class ServerInitializer {
 
 	public static Logger logger = Logger.getLogger(ServerInitializer.class
 			.getName());
 
+	/**
+	 * @brief project main method
+	 * @details initialize and start reactor server
+	 * @param none
+	 * @return none
+	 */
 	public static void main(String[] args) {
 		int port = 5000;
 		System.out.println("Server ON : " + port);

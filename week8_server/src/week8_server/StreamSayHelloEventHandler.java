@@ -1,3 +1,13 @@
+/**
+ * @file StreanSayHelloEventHandler.java
+ * @author youngkim
+ * @brief handle request that header is 0x5001
+ */
+
+/**
+ * @namespace week8_server
+ * @brief project package 
+ */
 package week8_server;
 
 import java.io.IOException;
@@ -6,6 +16,13 @@ import java.util.StringTokenizer;
 
 import org.apache.log4j.Logger;
 
+/**
+ * @class StreamSayHelloEventHandler
+ * @date 2014-09-17
+ * @author youngkim, ky200223@nhnnext.org
+ * @brief route request with header info to each handler
+ * @details get request that start with 0x5001(header) and print result
+ */
 public class StreamSayHelloEventHandler implements EventHandler {
 
 	public static Logger logger = Logger.getLogger(ServerInitializer.class
@@ -14,6 +31,12 @@ public class StreamSayHelloEventHandler implements EventHandler {
 	private static final int DATA_SIZE = 512;
 	private static final int TOKEN_NUM = 2;
 
+	/**
+	 * @brief request handler
+	 * @details read stream and tokenize for get each data
+	 * @param is (inputstream)
+	 * @return none
+	 */
 	public void handleEvent(InputStream is) {
 
 		try {
@@ -37,6 +60,11 @@ public class StreamSayHelloEventHandler implements EventHandler {
 		}
 	}
 
+	/**
+	 * @brief print request
+	 * @param string[]
+	 * @return none
+	 */
 	private void sayHello(String[] params) {
 		System.out.println("SayHello -> name : " + params[0] + "age : "
 				+ params[1]);

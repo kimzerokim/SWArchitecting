@@ -1,0 +1,4 @@
+<map id="week8_server.EventHandler" name="week8_server.EventHandler">
+<area shape="rect" id="node2" href="$classweek8__server_1_1_stream_say_hello_event_handler.html" title="route request with header info to each handler " alt="" coords="5,147,211,298"/>
+<area shape="rect" id="node3" href="$classweek8__server_1_1_stream_update_profile_event_handler.html" title="route request with header info to each handler " alt="" coords="235,147,429,298"/>
+</map>

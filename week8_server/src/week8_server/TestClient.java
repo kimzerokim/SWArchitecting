@@ -1,3 +1,13 @@
+/**
+ * @file TestClient.java
+ * @author youngkim
+ * @brief outputstream data for test
+ */
+
+/**
+ * @namespace week8_server
+ * @brief project package 
+ */
 package week8_server;
 
 import java.io.IOException;
@@ -5,6 +15,13 @@ import java.io.OutputStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
+/**
+ * @class TestClient
+ * @date 2014-09-17
+ * @author youngkim, ky200223@nhnnext.org
+ * @brief outputstream data for test
+ * @details outputstream date for test (2type - differentHeader)
+ */
 public class TestClient {
 
 	public static void main(String[] args) {
