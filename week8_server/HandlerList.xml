@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serverList>
+	<server name="server1">
+		<handler>week8_server.StreamSayHelloEventHandler</handler>
+		<handler>week8_server.StreamUpdateProfileEventHandler</handler>
+	</server>
+	<server name="server2">
+		<handler>week8_server.StreamSayHelloEventHandler</handler>
+		<handler>week8_server.StreamUpdateProfileEventHandler</handler>
+	</server>
+</serverList>

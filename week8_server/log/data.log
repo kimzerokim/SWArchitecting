@@ -1,0 +1,3 @@
+[FATAL], 2014-09-16 22:27:54, log4j:logger.fatal() 
+[ERROR], 2014-09-16 22:27:54, log4j:logger.error() 
+[WARN], 2014-09-16 22:27:54, log4j:logger.warn() 
