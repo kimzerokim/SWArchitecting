@@ -1,0 +1,142 @@
+\hypertarget{classweek8__server_1_1_demultiplexer}{\section{week8\-\_\-server.\-Demultiplexer 클래스 참조}
+\label{classweek8__server_1_1_demultiplexer}\index{week8\-\_\-server.\-Demultiplexer@{week8\-\_\-server.\-Demultiplexer}}
+}
+
+
+route request with header info to each handler  
+
+
+
+
+week8\-\_\-server.\-Demultiplexer에 대한 상속 다이어그램 \-: 
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{classweek8__server_1_1_demultiplexer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+week8\-\_\-server.\-Demultiplexer에 대한 협력 다이어그램\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classweek8__server_1_1_demultiplexer__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classweek8__server_1_1_demultiplexer_ad036466accbe99d2e8d1c09a50ecf70f}{Demultiplexer} (Socket \hyperlink{classweek8__server_1_1_demultiplexer_aa59bc55dc4eed3ea0247a8ea46913262}{socket}, \hyperlink{classweek8__server_1_1_handle_map}{Handle\-Map} \hyperlink{classweek8__server_1_1_demultiplexer_a9de8a7b062866296383729ba6e4ce0a1}{handle\-Map})
+\item 
+void \hyperlink{classweek8__server_1_1_demultiplexer_a5a09b3bc531ceb71fe22f1cadf3559c8}{run} ()
+\end{DoxyCompactItemize}
+\subsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+final int \hyperlink{classweek8__server_1_1_demultiplexer_a5240d883d891045d3cdf5f5497637eb1}{H\-E\-A\-D\-E\-R\-\_\-\-S\-I\-Z\-E} = 6
+\item 
+Socket \hyperlink{classweek8__server_1_1_demultiplexer_aa59bc55dc4eed3ea0247a8ea46913262}{socket}
+\item 
+\hyperlink{classweek8__server_1_1_handle_map}{Handle\-Map} \hyperlink{classweek8__server_1_1_demultiplexer_a9de8a7b062866296383729ba6e4ce0a1}{handle\-Map}
+\end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+route request with header info to each handler 
+
+\begin{DoxyDate}{날짜}
+2014-\/09-\/17 
+\end{DoxyDate}
+\begin{DoxyAuthor}{작성자}
+youngkim, \href{mailto:ky200223@nhnnext.org}{\tt ky200223@nhnnext.\-org}
+\end{DoxyAuthor}
+get request from socket, parse header then throw request to each header 
+
+Demultiplexer.\-java 파일의 25 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{생성자 \& 소멸자 문서화}
+\hypertarget{classweek8__server_1_1_demultiplexer_ad036466accbe99d2e8d1c09a50ecf70f}{\index{week8\-\_\-server\-::\-Demultiplexer@{week8\-\_\-server\-::\-Demultiplexer}!Demultiplexer@{Demultiplexer}}
+\index{Demultiplexer@{Demultiplexer}!week8_server::Demultiplexer@{week8\-\_\-server\-::\-Demultiplexer}}
+\subsubsection[{Demultiplexer}]{\setlength{\rightskip}{0pt plus 5cm}week8\-\_\-server.\-Demultiplexer.\-Demultiplexer (
+\begin{DoxyParamCaption}
+\item[{Socket}]{socket, }
+\item[{{\bf Handle\-Map}}]{handle\-Map}
+\end{DoxyParamCaption}
+)}}\label{classweek8__server_1_1_demultiplexer_ad036466accbe99d2e8d1c09a50ecf70f}
+
+
+Demultiplexer.\-java 파일의 32 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+32                                                              \{
+33         this.socket = \hyperlink{classweek8__server_1_1_demultiplexer_aa59bc55dc4eed3ea0247a8ea46913262}{socket};
+34         this.handleMap = \hyperlink{classweek8__server_1_1_demultiplexer_a9de8a7b062866296383729ba6e4ce0a1}{handleMap};
+35     \}
+\end{DoxyCode}
+
+
+\subsection{멤버 함수 문서화}
+\hypertarget{classweek8__server_1_1_demultiplexer_a5a09b3bc531ceb71fe22f1cadf3559c8}{\index{week8\-\_\-server\-::\-Demultiplexer@{week8\-\_\-server\-::\-Demultiplexer}!run@{run}}
+\index{run@{run}!week8_server::Demultiplexer@{week8\-\_\-server\-::\-Demultiplexer}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void week8\-\_\-server.\-Demultiplexer.\-run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classweek8__server_1_1_demultiplexer_a5a09b3bc531ceb71fe22f1cadf3559c8}
+
+
+Demultiplexer.\-java 파일의 38 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+38                       \{
+39         \textcolor{keywordflow}{try} \{
+40             InputStream is = socket.getInputStream();
+41 
+42             byte[] buffer = \textcolor{keyword}{new} byte[\hyperlink{classweek8__server_1_1_demultiplexer_a5240d883d891045d3cdf5f5497637eb1}{HEADER\_SIZE}];
+43             is.read(buffer);
+44             String header = \textcolor{keyword}{new} String(buffer);
+45 
+46             handleMap.get(header).handleEvent(is);
+47 
+48             socket.close();
+49         \} \textcolor{keywordflow}{catch} (IOException e) \{
+50             e.printStackTrace();
+51         \}
+52     \}
+\end{DoxyCode}
+
+
+\subsection{멤버 데이타 문서화}
+\hypertarget{classweek8__server_1_1_demultiplexer_a9de8a7b062866296383729ba6e4ce0a1}{\index{week8\-\_\-server\-::\-Demultiplexer@{week8\-\_\-server\-::\-Demultiplexer}!handle\-Map@{handle\-Map}}
+\index{handle\-Map@{handle\-Map}!week8_server::Demultiplexer@{week8\-\_\-server\-::\-Demultiplexer}}
+\subsubsection[{handle\-Map}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Handle\-Map} week8\-\_\-server.\-Demultiplexer.\-handle\-Map\hspace{0.3cm}{\ttfamily [private]}}}\label{classweek8__server_1_1_demultiplexer_a9de8a7b062866296383729ba6e4ce0a1}
+
+
+Demultiplexer.\-java 파일의 30 번째 라인에서 정의되었습니다.
+
+\hypertarget{classweek8__server_1_1_demultiplexer_a5240d883d891045d3cdf5f5497637eb1}{\index{week8\-\_\-server\-::\-Demultiplexer@{week8\-\_\-server\-::\-Demultiplexer}!H\-E\-A\-D\-E\-R\-\_\-\-S\-I\-Z\-E@{H\-E\-A\-D\-E\-R\-\_\-\-S\-I\-Z\-E}}
+\index{H\-E\-A\-D\-E\-R\-\_\-\-S\-I\-Z\-E@{H\-E\-A\-D\-E\-R\-\_\-\-S\-I\-Z\-E}!week8_server::Demultiplexer@{week8\-\_\-server\-::\-Demultiplexer}}
+\subsubsection[{H\-E\-A\-D\-E\-R\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}final int week8\-\_\-server.\-Demultiplexer.\-H\-E\-A\-D\-E\-R\-\_\-\-S\-I\-Z\-E = 6\hspace{0.3cm}{\ttfamily [private]}}}\label{classweek8__server_1_1_demultiplexer_a5240d883d891045d3cdf5f5497637eb1}
+
+
+Demultiplexer.\-java 파일의 27 번째 라인에서 정의되었습니다.
+
+\hypertarget{classweek8__server_1_1_demultiplexer_aa59bc55dc4eed3ea0247a8ea46913262}{\index{week8\-\_\-server\-::\-Demultiplexer@{week8\-\_\-server\-::\-Demultiplexer}!socket@{socket}}
+\index{socket@{socket}!week8_server::Demultiplexer@{week8\-\_\-server\-::\-Demultiplexer}}
+\subsubsection[{socket}]{\setlength{\rightskip}{0pt plus 5cm}Socket week8\-\_\-server.\-Demultiplexer.\-socket\hspace{0.3cm}{\ttfamily [private]}}}\label{classweek8__server_1_1_demultiplexer_aa59bc55dc4eed3ea0247a8ea46913262}
+
+
+Demultiplexer.\-java 파일의 29 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\-:\begin{DoxyCompactItemize}
+\item 
+src/week8\-\_\-server/\hyperlink{_demultiplexer_8java}{Demultiplexer.\-java}\end{DoxyCompactItemize}

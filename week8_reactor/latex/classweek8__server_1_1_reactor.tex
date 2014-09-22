@@ -1,0 +1,203 @@
+\hypertarget{classweek8__server_1_1_reactor}{\section{week8\-\_\-server.\-Reactor 클래스 참조}
+\label{classweek8__server_1_1_reactor}\index{week8\-\_\-server.\-Reactor@{week8\-\_\-server.\-Reactor}}
+}
+
+
+contains method for reactor server, start / get,set handler  
+
+
+
+
+week8\-\_\-server.\-Reactor에 대한 협력 다이어그램\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classweek8__server_1_1_reactor__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classweek8__server_1_1_reactor_a1aaf09065cb067bad05bb829c7f2eb3e}{Reactor} (int port)
+\begin{DoxyCompactList}\small\item\em init variable for server \end{DoxyCompactList}\item 
+void \hyperlink{classweek8__server_1_1_reactor_a8dfd45d29257ccfd68f44425f1f4bc1d}{start\-Server} ()
+\begin{DoxyCompactList}\small\item\em start\-Server \end{DoxyCompactList}\item 
+void \hyperlink{classweek8__server_1_1_reactor_a798e0b09e61056876c94df493b6d9cc9}{register\-Handler} (\hyperlink{interfaceweek8__server_1_1_event_handler}{Event\-Handler} handler)
+\begin{DoxyCompactList}\small\item\em register Handler \end{DoxyCompactList}\item 
+void \hyperlink{classweek8__server_1_1_reactor_a6fdcf080ba274be3c539f00c7c87cd97}{remove\-Handler} (\hyperlink{interfaceweek8__server_1_1_event_handler}{Event\-Handler} handler)
+\begin{DoxyCompactList}\small\item\em remove Handler \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+Server\-Socket \hyperlink{classweek8__server_1_1_reactor_a0ccdb32c43af4ff402db7cdf9991492b}{server\-Socket}
+\item 
+\hyperlink{classweek8__server_1_1_handle_map}{Handle\-Map} \hyperlink{classweek8__server_1_1_reactor_a8ba93454e7dbe329e3fb503b94b5240e}{handle\-Map}
+\end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+contains method for reactor server, start / get,set handler 
+
+\begin{DoxyDate}{날짜}
+2014-\/09-\/17 
+\end{DoxyDate}
+\begin{DoxyAuthor}{작성자}
+youngkim, \href{mailto:ky200223@nhnnext.org}{\tt ky200223@nhnnext.\-org}
+\end{DoxyAuthor}
+create handle\-Map/open Server\-Socket, manage handler\-Event 
+
+Reactor.\-java 파일의 23 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{생성자 \& 소멸자 문서화}
+\hypertarget{classweek8__server_1_1_reactor_a1aaf09065cb067bad05bb829c7f2eb3e}{\index{week8\-\_\-server\-::\-Reactor@{week8\-\_\-server\-::\-Reactor}!Reactor@{Reactor}}
+\index{Reactor@{Reactor}!week8_server::Reactor@{week8\-\_\-server\-::\-Reactor}}
+\subsubsection[{Reactor}]{\setlength{\rightskip}{0pt plus 5cm}week8\-\_\-server.\-Reactor.\-Reactor (
+\begin{DoxyParamCaption}
+\item[{int}]{port}
+\end{DoxyParamCaption}
+)}}\label{classweek8__server_1_1_reactor_a1aaf09065cb067bad05bb829c7f2eb3e}
+
+
+init variable for server 
+
+create handle\-Map, open Server\-Socket 
+\begin{DoxyParams}{매개변수}
+{\em port} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+none 
+\end{DoxyReturn}
+
+
+Reactor.\-java 파일의 33 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+33                              \{
+34         \hyperlink{classweek8__server_1_1_reactor_a8ba93454e7dbe329e3fb503b94b5240e}{handleMap} = \textcolor{keyword}{new} HandleMap();
+35         \textcolor{keywordflow}{try} \{
+36             \hyperlink{classweek8__server_1_1_reactor_a0ccdb32c43af4ff402db7cdf9991492b}{serverSocket} = \textcolor{keyword}{new} ServerSocket(port);
+37         \} \textcolor{keywordflow}{catch} (IOException e) \{
+38             e.printStackTrace();
+39         \}
+40     \}
+\end{DoxyCode}
+
+
+\subsection{멤버 함수 문서화}
+\hypertarget{classweek8__server_1_1_reactor_a798e0b09e61056876c94df493b6d9cc9}{\index{week8\-\_\-server\-::\-Reactor@{week8\-\_\-server\-::\-Reactor}!register\-Handler@{register\-Handler}}
+\index{register\-Handler@{register\-Handler}!week8_server::Reactor@{week8\-\_\-server\-::\-Reactor}}
+\subsubsection[{register\-Handler}]{\setlength{\rightskip}{0pt plus 5cm}void week8\-\_\-server.\-Reactor.\-register\-Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf Event\-Handler}}]{handler}
+\end{DoxyParamCaption}
+)}}\label{classweek8__server_1_1_reactor_a798e0b09e61056876c94df493b6d9cc9}
+
+
+register Handler 
+
+register Handler at \hyperlink{classweek8__server_1_1_handle_map}{Handle\-Map} 
+\begin{DoxyParams}{매개변수}
+{\em handler} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+none 
+\end{DoxyReturn}
+
+
+Reactor.\-java 파일의 61 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+61                                                       \{
+62         handleMap.put(handler.getHandler(), handler);
+63     \}
+\end{DoxyCode}
+\hypertarget{classweek8__server_1_1_reactor_a6fdcf080ba274be3c539f00c7c87cd97}{\index{week8\-\_\-server\-::\-Reactor@{week8\-\_\-server\-::\-Reactor}!remove\-Handler@{remove\-Handler}}
+\index{remove\-Handler@{remove\-Handler}!week8_server::Reactor@{week8\-\_\-server\-::\-Reactor}}
+\subsubsection[{remove\-Handler}]{\setlength{\rightskip}{0pt plus 5cm}void week8\-\_\-server.\-Reactor.\-remove\-Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf Event\-Handler}}]{handler}
+\end{DoxyParamCaption}
+)}}\label{classweek8__server_1_1_reactor_a6fdcf080ba274be3c539f00c7c87cd97}
+
+
+remove Handler 
+
+remove Handler at \hyperlink{classweek8__server_1_1_handle_map}{Handle\-Map} 
+\begin{DoxyParams}{매개변수}
+{\em handler} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+none 
+\end{DoxyReturn}
+
+
+Reactor.\-java 파일의 71 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+71                                                     \{
+72         handleMap.remove(handler.getHandler());
+73     \}
+\end{DoxyCode}
+\hypertarget{classweek8__server_1_1_reactor_a8dfd45d29257ccfd68f44425f1f4bc1d}{\index{week8\-\_\-server\-::\-Reactor@{week8\-\_\-server\-::\-Reactor}!start\-Server@{start\-Server}}
+\index{start\-Server@{start\-Server}!week8_server::Reactor@{week8\-\_\-server\-::\-Reactor}}
+\subsubsection[{start\-Server}]{\setlength{\rightskip}{0pt plus 5cm}void week8\-\_\-server.\-Reactor.\-start\-Server (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classweek8__server_1_1_reactor_a8dfd45d29257ccfd68f44425f1f4bc1d}
+
+
+start\-Server 
+
+start dispatch 
+\begin{DoxyParams}{매개변수}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+none 
+\end{DoxyReturn}
+
+
+Reactor.\-java 파일의 48 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+48                               \{
+49 
+50         \textcolor{comment}{// Dispatcher dispatcher = new ThreadPerDispatcher();}
+51         Dispatcher dispatcher = \textcolor{keyword}{new} ThreadPoolDispatcher();
+52         dispatcher.dispatch(\hyperlink{classweek8__server_1_1_reactor_a0ccdb32c43af4ff402db7cdf9991492b}{serverSocket}, \hyperlink{classweek8__server_1_1_reactor_a8ba93454e7dbe329e3fb503b94b5240e}{handleMap});
+53     \}
+\end{DoxyCode}
+
+
+\subsection{멤버 데이타 문서화}
+\hypertarget{classweek8__server_1_1_reactor_a8ba93454e7dbe329e3fb503b94b5240e}{\index{week8\-\_\-server\-::\-Reactor@{week8\-\_\-server\-::\-Reactor}!handle\-Map@{handle\-Map}}
+\index{handle\-Map@{handle\-Map}!week8_server::Reactor@{week8\-\_\-server\-::\-Reactor}}
+\subsubsection[{handle\-Map}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Handle\-Map} week8\-\_\-server.\-Reactor.\-handle\-Map\hspace{0.3cm}{\ttfamily [private]}}}\label{classweek8__server_1_1_reactor_a8ba93454e7dbe329e3fb503b94b5240e}
+
+
+Reactor.\-java 파일의 25 번째 라인에서 정의되었습니다.
+
+\hypertarget{classweek8__server_1_1_reactor_a0ccdb32c43af4ff402db7cdf9991492b}{\index{week8\-\_\-server\-::\-Reactor@{week8\-\_\-server\-::\-Reactor}!server\-Socket@{server\-Socket}}
+\index{server\-Socket@{server\-Socket}!week8_server::Reactor@{week8\-\_\-server\-::\-Reactor}}
+\subsubsection[{server\-Socket}]{\setlength{\rightskip}{0pt plus 5cm}Server\-Socket week8\-\_\-server.\-Reactor.\-server\-Socket\hspace{0.3cm}{\ttfamily [private]}}}\label{classweek8__server_1_1_reactor_a0ccdb32c43af4ff402db7cdf9991492b}
+
+
+Reactor.\-java 파일의 24 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\-:\begin{DoxyCompactItemize}
+\item 
+src/week8\-\_\-server/\hyperlink{_reactor_8java}{Reactor.\-java}\end{DoxyCompactItemize}

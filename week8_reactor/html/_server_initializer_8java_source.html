@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>week8_server: src/week8_server/ServerInitializer.java 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">week8_server
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'검색');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>메인&#160;페이지</span></a></li>
+      <li><a href="namespaces.html"><span>패키지</span></a></li>
+      <li><a href="annotated.html"><span>클래스</span></a></li>
+      <li class="current"><a href="files.html"><span>파일들</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="검색" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>파일&#160;목록</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_server_initializer_8java_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>모두</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>클래스</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>네임스페이스들</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>파일들</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>함수</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>변수</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">ServerInitializer.java</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_server_initializer_8java.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">package </span>week8_server;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">import</span> java.io.File;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">import</span> java.util.List;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">import</span> org.apache.log4j.Logger;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">import</span> org.simpleframework.xml.Serializer;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">import</span> org.simpleframework.xml.core.Persister;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classweek8__server_1_1_server_initializer.html">   29</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classweek8__server_1_1_server_initializer.html">ServerInitializer</a> {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classweek8__server_1_1_server_initializer.html#a93ccaaf656ba68e2dd3950bacc0e9b2e">   31</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> Logger <a class="code" href="classweek8__server_1_1_server_initializer.html#a93ccaaf656ba68e2dd3950bacc0e9b2e">logger</a> = Logger.getLogger(ServerInitializer.class</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            .getName());</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classweek8__server_1_1_server_initializer.html#a73b9694a5855a87335cbe63c96f8c8a9">   40</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classweek8__server_1_1_server_initializer.html#a73b9694a5855a87335cbe63c96f8c8a9">main</a>(String[] args) {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordtype">int</span> port = 5000;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        System.out.println(<span class="stringliteral">&quot;Server ON : &quot;</span> + port);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        logger.info(<span class="stringliteral">&quot;Server ON : &quot;</span> + port);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        logger.fatal(<span class="stringliteral">&quot;log4j:logger.fatal()&quot;</span>);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        logger.error(<span class="stringliteral">&quot;log4j:logger.error()&quot;</span>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        logger.warn(<span class="stringliteral">&quot;log4j:logger.warn()&quot;</span>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        logger.info(<span class="stringliteral">&quot;log4j:logger.info()&quot;</span>);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        logger.debug(<span class="stringliteral">&quot;log4j:logger.debug()&quot;</span>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        logger.trace(<span class="stringliteral">&quot;log4j:logger.trace()&quot;</span>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="classweek8__server_1_1_reactor.html">Reactor</a> reactor = <span class="keyword">new</span> <a class="code" href="classweek8__server_1_1_reactor.html">Reactor</a>(port);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        Serializer serializer = <span class="keyword">new</span> Persister();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        File source = <span class="keyword">new</span> File(<span class="stringliteral">&quot;HandlerList.xml&quot;</span>);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <a class="code" href="classweek8__server_1_1_server_list_data.html">ServerListData</a> serverList = serializer.read(ServerListData.class,</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                    source);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keywordflow">for</span> (<a class="code" href="classweek8__server_1_1_handler_list_data.html">HandlerListData</a> handlerListData : serverList.<a class="code" href="classweek8__server_1_1_server_list_data.html#a290deb1c104276fd65c014e4e4d790f0">getServer</a>()) {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                <span class="keywordflow">if</span> (<span class="stringliteral">&quot;server1&quot;</span>.equals(handlerListData.getName())) {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                    List&lt;String&gt; handlerList = handlerListData.getHandler();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                    <span class="keywordflow">for</span> (String handler : handlerList) {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                        <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                            reactor.registerHandler((<a class="code" href="interfaceweek8__server_1_1_event_handler.html">EventHandler</a>) Class</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                                    .forName(handler).newInstance());</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                        } <span class="keywordflow">catch</span> (InstantiationException e) {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                            e.printStackTrace();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                        } <span class="keywordflow">catch</span> (IllegalAccessException e) {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                            e.printStackTrace();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                        } <span class="keywordflow">catch</span> (ClassNotFoundException e) {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                            e.printStackTrace();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                        }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                    }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        } <span class="keywordflow">catch</span> (Exception e) {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            e.printStackTrace();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        reactor.startServer();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
+<div class="ttc" id="classweek8__server_1_1_reactor_html"><div class="ttname"><a href="classweek8__server_1_1_reactor.html">week8_server.Reactor</a></div><div class="ttdoc">contains method for reactor server, start / get,set handler </div><div class="ttdef"><b>Definition:</b> <a href="_reactor_8java_source.html#l00023">Reactor.java:23</a></div></div>
+<div class="ttc" id="classweek8__server_1_1_server_initializer_html"><div class="ttname"><a href="classweek8__server_1_1_server_initializer.html">week8_server.ServerInitializer</a></div><div class="ttdoc">Initializer class for Reactor-Thread using server. </div><div class="ttdef"><b>Definition:</b> <a href="_server_initializer_8java_source.html#l00029">ServerInitializer.java:29</a></div></div>
+<div class="ttc" id="interfaceweek8__server_1_1_event_handler_html"><div class="ttname"><a href="interfaceweek8__server_1_1_event_handler.html">week8_server.EventHandler</a></div><div class="ttdef"><b>Definition:</b> <a href="_event_handler_8java_source.html#l00015">EventHandler.java:15</a></div></div>
+<div class="ttc" id="classweek8__server_1_1_server_initializer_html_a93ccaaf656ba68e2dd3950bacc0e9b2e"><div class="ttname"><a href="classweek8__server_1_1_server_initializer.html#a93ccaaf656ba68e2dd3950bacc0e9b2e">week8_server.ServerInitializer.logger</a></div><div class="ttdeci">static Logger logger</div><div class="ttdef"><b>Definition:</b> <a href="_server_initializer_8java_source.html#l00031">ServerInitializer.java:31</a></div></div>
+<div class="ttc" id="classweek8__server_1_1_handler_list_data_html"><div class="ttname"><a href="classweek8__server_1_1_handler_list_data.html">week8_server.HandlerListData</a></div><div class="ttdef"><b>Definition:</b> <a href="_handler_list_data_8java_source.html#l00018">HandlerListData.java:18</a></div></div>
+<div class="ttc" id="classweek8__server_1_1_server_initializer_html_a73b9694a5855a87335cbe63c96f8c8a9"><div class="ttname"><a href="classweek8__server_1_1_server_initializer.html#a73b9694a5855a87335cbe63c96f8c8a9">week8_server.ServerInitializer.main</a></div><div class="ttdeci">static void main(String[] args)</div><div class="ttdoc">project main method </div><div class="ttdef"><b>Definition:</b> <a href="_server_initializer_8java_source.html#l00040">ServerInitializer.java:40</a></div></div>
+<div class="ttc" id="classweek8__server_1_1_server_list_data_html"><div class="ttname"><a href="classweek8__server_1_1_server_list_data.html">week8_server.ServerListData</a></div><div class="ttdef"><b>Definition:</b> <a href="_server_list_data_8java_source.html#l00019">ServerListData.java:19</a></div></div>
+<div class="ttc" id="classweek8__server_1_1_server_list_data_html_a290deb1c104276fd65c014e4e4d790f0"><div class="ttname"><a href="classweek8__server_1_1_server_list_data.html#a290deb1c104276fd65c014e4e4d790f0">week8_server.ServerListData.getServer</a></div><div class="ttdeci">List&lt; HandlerListData &gt; getServer()</div><div class="ttdef"><b>Definition:</b> <a href="_server_list_data_8java_source.html#l00023">ServerListData.java:23</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_7c0036d8e2c0b44779e580aa43594cdd.html">week8_server</a></li><li class="navelem"><a class="el" href="_server_initializer_8java.html">ServerInitializer.java</a></li>
+    <li class="footer">생성시간 : 수 9월 17 2014 06:28:36, 프로젝트명 : week8_server, 생성자 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>

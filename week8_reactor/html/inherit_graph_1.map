@@ -1,0 +1,5 @@
+<map id="그래픽컬한 클래스 계통도" name="그래픽컬한 클래스 계통도">
+<area shape="rect" id="node1" href="$interfaceweek8__server_1_1_dispatcher.html" title="week8_server.Dispatcher" alt="" coords="6,31,178,57"/>
+<area shape="rect" id="node2" href="$classweek8__server_1_1_thread_per_dispatcher.html" title="dispatcher create thread for each stream " alt="" coords="230,5,466,32"/>
+<area shape="rect" id="node3" href="$classweek8__server_1_1_thread_pool_dispatcher.html" title="week8_server.ThreadPoolDispatcher" alt="" coords="227,56,469,83"/>
+</map>
